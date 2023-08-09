@@ -1,0 +1,34 @@
+{
+    "name": "FunctionTEST",
+    "maps": [
+        {
+            "name": "FunctionTEST",
+            "id": "339a6008-d457-41a1-97cd-67811b9b8930",
+            "actions": [
+                {
+                    "name": "PressO",
+                    "type": "Button",
+                    "id": "adcb8c00-c3d9-4a3e-b28a-001cdb55c211",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2c75bfea-b08e-4544-8ea1-08559411c159",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressO",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
