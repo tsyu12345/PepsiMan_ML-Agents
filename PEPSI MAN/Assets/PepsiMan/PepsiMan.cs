@@ -11,7 +11,7 @@ using StarterAssets;
 /// </summary>
 public class PepsiMan : StarterAssetsInputs{
 
-    [Header("Status of PepsiMan")]
+    [Header("Action of PepsiMan")]
     public bool useTumble = false;
     public bool useStop = false;
 
