@@ -11,6 +11,9 @@ using StarterAssets;
 /// </summary>
 public class PepsiMan : StarterAssetsInputs{
 
+    /**
+    * TODO: パラメータ設定の見直し。
+    */
     [Header("Action of PepsiMan")]
     public bool useTumble = false;
     public bool useStop = false;
@@ -40,7 +43,7 @@ public class PepsiMan : StarterAssetsInputs{
     }
 
 
-    private void Stop() {
+    public void Stop() {
         //動きを止める
         move = Vector2.zero;
         MoveInput(move);
@@ -56,6 +59,14 @@ public class PepsiMan : StarterAssetsInputs{
             transform.Rotate(new Vector3(90, 0, 0));
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
         }
+    }
+
+
+    /// <summary>
+    /// スライディングの実装
+    /// </summary>
+    public void Sliding() {
+
     }
 
     /// <summary>
