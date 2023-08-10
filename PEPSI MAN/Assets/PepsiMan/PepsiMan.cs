@@ -26,8 +26,8 @@ public class PepsiMan : StarterAssetsInputs{
     }
 
     void Update() {
-        if(Tumble) {
-            Tumbling();
+        if(useTumble) {
+            Tumble();
         }
     }
     
@@ -44,13 +44,13 @@ public class PepsiMan : StarterAssetsInputs{
         //動きを止める
         move = Vector2.zero;
         MoveInput(move);
-        movingStop = true;
+        useStop = true;
     }
 
 
-    public void Tumbling() {
+    public void Tumble() {
         //動きを止めて、転倒用のアニメーションを再生する
-        if (Tumble) {
+        if (useTumble) {
             Stop();
             //todo:現在は仮でtransformで回転させるだけ
             transform.Rotate(new Vector3(90, 0, 0));
@@ -62,7 +62,8 @@ public class PepsiMan : StarterAssetsInputs{
     /// Oキーを押したときに呼ばれる(機能テスト用)
     /// </summary>
     private void test() {
-        Tumble = Tumble ? false : true;
+        //Tumble = useTumble ? false : true;
+        useTumble = useTumble ? false : true;
     }
     
     
