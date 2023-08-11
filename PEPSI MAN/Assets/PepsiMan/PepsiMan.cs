@@ -22,16 +22,16 @@ public class PepsiMan : StarterAssetsInputs{
 
     void Start() {
 
+        /*
         oKeyAction = new InputAction("PressO", InputActionType.Button, "<Keyboard>/o");
         oKeyAction.performed += ctx => test();
         oKeyAction.Enable();
+        */
         
     }
 
     void Update() {
-        if(useTumble) {
-            Tumble();
-        }
+        
     }
     
     public override void OnMove(InputValue value) {
@@ -64,6 +64,7 @@ public class PepsiMan : StarterAssetsInputs{
 
     /// <summary>
     /// スライディングの実装
+    /// 
     /// </summary>
     public void Sliding() {
 
@@ -75,6 +76,11 @@ public class PepsiMan : StarterAssetsInputs{
     private void test() {
         //Tumble = useTumble ? false : true;
         useTumble = useTumble ? false : true;
+    }
+
+
+    private void PlayBGM() {
+
     }
     
     
