@@ -20,13 +20,17 @@ public class PepsiMan : StarterAssetsInputs{
 
     private InputAction oKeyAction;
 
+    private CharacterController controller;
+
     void Start() {
 
-        /*
+        
         oKeyAction = new InputAction("PressO", InputActionType.Button, "<Keyboard>/o");
-        oKeyAction.performed += ctx => test();
+        oKeyAction.performed += ctx => Tumble();
         oKeyAction.Enable();
-        */
+
+        controller = GetComponent<CharacterController>();
+        
         
     }
 
@@ -53,12 +57,10 @@ public class PepsiMan : StarterAssetsInputs{
 
     public void Tumble() {
         //動きを止めて、転倒用のアニメーションを再生する
-        if (useTumble) {
-            Stop();
-            //todo:現在は仮でtransformで回転させるだけ
-            transform.Rotate(new Vector3(90, 0, 0));
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
-        }
+        Stop();
+        //todo:現在は仮でtransformで回転させるだけ
+        transform.Rotate(new Vector3(90, 0, 0));
+        controller.height = 0.5f;
     }
 
 

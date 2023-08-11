@@ -9,18 +9,16 @@ public class CanEffect : MonoBehaviour {
 
     void Start() {
         audioSource = GetComponent<AudioSource>();
+        Debug.Log("AudioSource {0}", audioSource);
     }
 
     void OnTriggerEnter(Collider other) {
         Debug.Log("Get Can!");
-        PlayDisposeEffect();
+        audioSource.PlayOneShot(sound);
+        Destroy(gameObject);
         
     }
 
-    private void PlayDisposeEffect() {
-        audioSource.PlayOneShot(sound);
-        Destroy(gameObject);
-    }
 
 
 }
