@@ -16,9 +16,13 @@ public class CanEffect : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         Debug.Log("Get Can!");
-        audioSource.PlayOneShot(sound);
-        Destroy(gameObject, 0.25f);
-        //gameObject.SetActive(false);
+        DestroyEffect();
+    }
+
+
+    private void DestroyEffect() {
+        AudioSource.PlayClipAtPoint(sound, transform.position);
+        Destroy(gameObject);
     }
 
 

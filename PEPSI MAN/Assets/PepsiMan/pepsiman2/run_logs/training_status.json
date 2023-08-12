@@ -1,0 +1,29 @@
+{
+    "PepsiMan": {
+        "checkpoints": [
+            {
+                "steps": 48877,
+                "file_path": "results\\pepsiman2\\PepsiMan\\PepsiMan-48877.onnx",
+                "reward": 0.14285714285714285,
+                "creation_time": 1691824354.572837,
+                "auxillary_file_paths": [
+                    "results\\pepsiman2\\PepsiMan\\PepsiMan-48877.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 48877,
+            "file_path": "results\\pepsiman2\\PepsiMan.onnx",
+            "reward": 0.14285714285714285,
+            "creation_time": 1691824354.572837,
+            "auxillary_file_paths": [
+                "results\\pepsiman2\\PepsiMan\\PepsiMan-48877.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.0.1+cu117"
+    }
+}
